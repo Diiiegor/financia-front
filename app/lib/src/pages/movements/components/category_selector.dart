@@ -3,9 +3,14 @@ import 'package:get/get.dart';
 import 'package:app/src/pages/movements/controllers/new_movement_controller.dart';
 import 'package:app/src/pages/movements/components/category_item.dart';
 import 'package:app/src/pages/movements/controllers/category_selector_controller.dart';
+
+
 class CategorySelector extends StatelessWidget {
+  CategorySelector({super.key});
   final newMovementController = Get.find<NewMovementController>();
   final categorySelectorController = Get.put(CategorySelectorController());
+
+  
 
   @override
   Widget build(BuildContext context) {
@@ -28,6 +33,7 @@ class CategorySelector extends StatelessWidget {
                 name: newMovementController.categories.value[index].name,
                 onPressed: (){
                   categorySelectorController.categorySelected.value = newMovementController.categories.value[index].id ?? 0;
+                  newMovementController.setSelectedCategory( newMovementController.categories.value[index].id ?? 0);
                 },
               );
             },

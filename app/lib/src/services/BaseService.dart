@@ -10,9 +10,8 @@ class Baseservice extends GetConnect {
     httpClient.addResponseModifier((request, response) {
       if(response.statusCode == 401){
         LogoutService.logout();
-      }else{
-        return response;
       }
+      return response;
     });
 
     super.onInit();

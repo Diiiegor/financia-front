@@ -2,11 +2,12 @@ import 'package:flutter/material.dart';
 import 'package:app/src/UIKit/financia_colors.dart';
 
 class FinanciaButton extends StatelessWidget {
-  const FinanciaButton({super.key, required this.text, required this.onPressed, this.color = FinanciaColors.buttonPrimary,this.size});
+  const FinanciaButton({super.key, required this.text, required this.onPressed, this.color = FinanciaColors.buttonPrimary,this.size,this.loading = false});
   final String text;
   final VoidCallback onPressed;
   final FinanciaColors color;
   final Size? size;
+  final bool loading;
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +27,7 @@ class FinanciaButton extends StatelessWidget {
           minimumSize: size,
           backgroundColor: color.color,
         ),
-        child: Text(text,style: const TextStyle(color: Colors.white,fontWeight: FontWeight.bold),),
+        child: loading ? const CircularProgressIndicator() : Text(text,style: const TextStyle(color: Colors.white,fontWeight: FontWeight.bold),),
       ),
     );
   }
