@@ -15,7 +15,7 @@ class Emaillogin extends StatelessWidget {
               TextField(
                 decoration: const InputDecoration(
                   hintText: "Correo",
-                  hintStyle: TextStyle(color: Colors.white),
+                  hintStyle: const TextStyle(color: Colors.white),
                 ),
                 controller: _logincontroller.usernameController,
                 style: const TextStyle(color: Colors.white),

@@ -3,12 +3,14 @@ import 'package:get/get.dart';
 import 'controllers/category_controller.dart';
 import 'package:app/src/widgets/FilledTextField.dart';
 import 'package:emoji_picker_flutter/emoji_picker_flutter.dart';
+import 'package:app/src/UIKit/financia_appbar.dart';
 class NewCategoryPage extends StatelessWidget {
   final CategoryController categoryController = Get.put(CategoryController());
 
   @override
   Widget build(BuildContext context) {
     return  Scaffold(
+      appBar: FinanciaAppBar(title: "Nueva categoría", onBack: (){Get.back();}),
       body:  Center(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.center,

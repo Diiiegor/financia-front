@@ -1,3 +1,4 @@
+import 'package:app/src/UIKit/financia_appbar.dart';
 import 'package:app/src/pages/movements/components/category_selector.dart';
 import 'package:app/src/pages/movements/controllers/new_movement_controller.dart';
 import 'package:app/src/utils/currency_input_formatter.dart';
@@ -21,20 +22,7 @@ class NewMovementPage extends StatelessWidget {
   final buttonWidth = width * 0.4;
 
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: FinanciaColors.mainBg.color,
-        elevation: 0,
-        flexibleSpace: Container(
-          color: FinanciaColors.mainBg.color,
-        ),
-        leading: IconButton(
-          onPressed: (){
-            Get.back();
-          },
-          icon: const Icon(Icons.arrow_back_ios, color: Colors.white,),
-        ),
-        title: const Text('Nuevo movimiento financiero', style: TextStyle(color: Colors.white),),
-      ),
+      appBar: FinanciaAppBar(title: "Nuevo movimiento", onBack: (){Get.back();}),
       body: Container(
         padding: const EdgeInsets.all(20),
         child: SingleChildScrollView(

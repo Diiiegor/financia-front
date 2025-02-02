@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class DashboardPage extends StatelessWidget {
-  final DashboardController dashboardController =
-      Get.put(DashboardController());
+  DashboardPage({super.key});
+  final DashboardController dashboardController = Get.put(DashboardController());
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -19,19 +19,20 @@ class DashboardPage extends StatelessWidget {
               ElevatedButton(
                   onPressed: dashboardController.handleClickMovements,
                   style: const ButtonStyle(
-                      backgroundColor: const WidgetStatePropertyAll(
-                          Color.fromRGBO(65, 116, 217, 1)),
-                      minimumSize: const WidgetStatePropertyAll(
-                          Size(double.infinity, 50)),
-                      ),
+                    backgroundColor: const WidgetStatePropertyAll(
+                        Color.fromRGBO(65, 116, 217, 1)),
+                    minimumSize:
+                        const WidgetStatePropertyAll(Size(double.infinity, 50)),
+                  ),
                   child: const Text("Ver lista de movimientos")),
               const SizedBox(height: 10),
               ElevatedButton(
                   onPressed: dashboardController.handleClickNewCategory,
                   style: const ButtonStyle(
-                      backgroundColor:  WidgetStatePropertyAll(
+                      backgroundColor: WidgetStatePropertyAll(
                           Color.fromRGBO(65, 116, 217, 1)),
-                      minimumSize:  WidgetStatePropertyAll(Size(double.infinity, 50))),
+                      minimumSize:
+                          WidgetStatePropertyAll(Size(double.infinity, 50))),
                   child: const Text("Crear nueva categoria")),
               const SizedBox(height: 10),
               ElevatedButton(
@@ -39,7 +40,8 @@ class DashboardPage extends StatelessWidget {
                   style: const ButtonStyle(
                       backgroundColor: WidgetStatePropertyAll(
                           Color.fromRGBO(65, 116, 217, 1)),
-                      minimumSize: WidgetStatePropertyAll(Size(double.infinity, 50))),
+                      minimumSize:
+                          WidgetStatePropertyAll(Size(double.infinity, 50))),
                   child: const Text("Crear nuevo movimiento")),
             ],
           ),

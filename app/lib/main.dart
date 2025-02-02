@@ -5,14 +5,13 @@ import 'package:app/src/pages/splash/splash.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get_storage/get_storage.dart';
-import 'package:app/src/pages/categories/new_category_page.dart';
 import 'package:app/src/pages/movements/new_movement_page.dart';
 void main() async {
+
   final pages = [
     GetPage(name: '/login', page: () => Loginpage()),
     GetPage(name: '/dashboard', page: () => DashboardPage()),
     GetPage(name: '/movements', page: ()=>MovementsPage()),
-    GetPage(name: '/new-category', page: ()=>NewCategoryPage()),
     GetPage(name: '/new-movement', page: ()=>NewMovementPage())
   ];
 
