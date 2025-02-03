@@ -35,6 +35,9 @@ dependencies:
   emoji_picker_flutter:
   flutter_svg:
   intl:
+  shimmer: ^3.0.0
+  fl_chart: ^0.66.0 
+
 
 
   # The following adds the Cupertino Icons font to your application.

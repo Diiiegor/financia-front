@@ -8,7 +8,9 @@ enum FinanciaColors {
   mainBg,
   bgSecondary,
   buttonPrimaryDisabled,
-  buttonSecondaryDisabled
+  buttonSecondaryDisabled,
+  shimmerBase,
+  shimmerHighlight
 }
 
 extension FinanciaColorsExtension on FinanciaColors {
@@ -22,5 +24,7 @@ extension FinanciaColorsExtension on FinanciaColors {
 
     FinanciaColors.mainBg => const Color(0xFF15171C),
     FinanciaColors.bgSecondary => const Color(0xFF1D1F27),
+    FinanciaColors.shimmerBase => const Color(0xFF1D1F27),
+    FinanciaColors.shimmerHighlight => const Color(0xFF2A2D37),
   };
 }
